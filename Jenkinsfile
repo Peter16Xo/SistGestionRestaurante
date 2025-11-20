@@ -63,5 +63,18 @@ pipeline {
                 }
             }
         }
+
+       post {
+        success {
+            echo '✅ NOTIFICACIÓN: El Pipeline finalizó con ÉXITO.'
+            echo 'El proyecto se compiló, testeó y desplegó correctamente.'
+            // Aquí podrías agregar plugins de Slack o Email si los tuvieras configurados
+        }
+        failure {
+            echo '❌ NOTIFICACIÓN: El Pipeline FALLÓ.'
+            echo 'Revisar los logs para ver qué etapa se rompió.'
+        }
     }
+// Cierre del pipeline
 }
+
