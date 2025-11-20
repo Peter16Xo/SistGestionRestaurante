@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Checkstyle Results – SistemaGestionRestaurante</title>
+    <link rel="stylesheet" href="https://maven.apache.org/css/apache-maven-fluido-2.0.0-M9.min.css" />
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { padding: 8px 12px; border: 1px solid #ccc; }
+        th { background-color: #eee; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Checkstyle Results – SistemaGestionRestaurante</h1>
+        <p>Last Published: 2025-07-06 | Version: 1.0-SNAPSHOT</p>
+    </header>
+    <main>
+        <section>
+            <h2>Resumen</h2>
+            <table>
+                <tr><th>Archivos</th><th>Errores</th></tr>
+                <tr><td>1</td><td class="error">5</td></tr>
+            </table>
+        </section>
+        <section>
+            <h2>Archivos</h2>
+            <table>
+                <tr><th>Archivo</th><th>Errores</th></tr>
+                <tr><td>controlador/PlatilloControlador.java</td><td class="error">5</td></tr>
+            </table>
+        </section>
+        <section>
+            <h2>Reglas Analizadas</h2>
+            <table>
+                <tr><th>Regla</th><th>Descripción</th><th>Límite</th><th>Errores</th></tr>
+                <tr><td>MethodName</td><td>Nombre de métodos en minúscula</td><td>Patrón: ^[a-z][a-zA-Z0-9]*$</td><td>0</td></tr>
+                <tr><td>LocalVariableName</td><td>Variables locales en minúscula</td><td>Patrón: ^[a-z][a-zA-Z0-9]*$</td><td>0</td></tr>
+                <tr><td>MemberName</td><td>Miembros en minúscula</td><td>Patrón: ^[a-z][a-zA-Z0-9]*$</td><td>0</td></tr>
+                <tr><td>TypeName</td><td>Clases comienzan en mayúscula</td><td>Patrón: ^[A-Z][a-zA-Z0-9]*$</td><td>0</td></tr>
+                <tr><td>MethodLength</td><td>Métodos con máximo 10 líneas</td><td>10 líneas</td><td class="error">5</td></tr>
+                <tr><td>ParameterNumber</td><td>Métodos con máximo 3 parámetros</td><td>3 parámetros</td><td>0</td></tr>
+            </table>
+        </section>
+        <section>
+            <h2>Detalles</h2>
+            <table>
+                <tr><th>Línea</th><th>Método</th><th>Líneas</th><th>Límite</th><th>Regla</th></tr>
+                <tr><td>20</td><td>PlatilloControlador</td><td>12</td><td>10</td><td>MethodLength</td></tr>
+                <tr><td>41</td><td>registrarPlatillo</td><td>30</td><td>10</td><td>MethodLength</td></tr>
+                <tr><td>72</td><td>actualizarPlatillo</td><td>39</td><td>10</td><td>MethodLength</td></tr>
+                <tr><td>112</td><td>eliminarPlatillo</td><td>19</td><td>10</td><td>MethodLength</td></tr>
+                <tr><td>132</td><td>buscarPlatillos</td><td>16</td><td>10</td><td>MethodLength</td></tr>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <hr />
+        <p>© 2025 SistemaGestionRestaurante – Checkstyle</p>
+    </footer>
+</body>
+</html>

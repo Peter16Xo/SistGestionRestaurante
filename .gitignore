@@ -1,0 +1,13 @@
+# Archivos de compilación de NetBeans
+/build/
+/dist/
+/nbproject/private/
+/nbproject/Makefile-*.mk
+/nbproject/Package-*.bash
+*.class
+*.apk
+*.ap_
+
+# Archivos de sistema
+Thumbs.db
+.DS_Store
