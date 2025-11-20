@@ -92,7 +92,7 @@ public class PlatilloControladorTest {
     @Test
     public void testActualizarPlatilloSinSeleccion() {
         controlador.actualizarPlatillo(); // No hay selección
-        assertTrue(true); // Solo se verifica que no explota
+        assertTrue(true); // Solo se verifica que no explotaa
     }
 
     // ✅ Prueba válida para eliminar
