@@ -1,10 +1,10 @@
 pipeline {
     agent any
-    
-    // Esta sección es opcional, actívala si Jenkins no encuentra el comando 'ant'
-    // tools {
-    //     ant 'Ant' // Asegúrate de tener configurado 'Ant' en Jenkins -> Global Tool Configuration
-    // }
+
+    // AHORA ESTA PARTE DEBE ESTAR ACTIVA (SIN // AL INICIO)
+    tools {
+        ant 'Ant' 
+    }
 
     stages {
         stage('Limpieza Inicial') {
