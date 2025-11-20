@@ -1,11 +1,13 @@
 pipeline {
     agent any
     
+    // Definimos la herramienta 'Ant' que configuramos en Jenkins
     tools {
         ant 'Ant' 
     }
 
     stages {
+        // Etapa de limpieza: Borra compilaciones anteriores para empezar de cero
         stage('Limpieza Inicial') {
             steps {
                 echo 'Limpiando entorno...'
@@ -19,6 +21,7 @@ pipeline {
             }
         }
         
+        // ETAPA 1: BUILD (Compilación del código fuente)
         stage('Stage 1: Build (Compilación)') {
             steps {
                 echo 'Compilando código fuente...'
@@ -32,6 +35,7 @@ pipeline {
             }
         }
 
+        // ETAPA 2: TEST (Ejecución de pruebas unitarias JUnit)
         stage('Stage 2: Test (Pruebas)') {
             steps {
                 echo 'Ejecutando pruebas unitarias...'
@@ -45,6 +49,7 @@ pipeline {
             }
         }
 
+        // ETAPA 3: DEPLOY (Simulación de despliegue)
         stage('Stage 3: Deploy (Despliegue)') {
             steps {
                 echo 'Desplegando aplicación a entorno de Producción...'
@@ -63,18 +68,21 @@ pipeline {
                 }
             }
         }
+    }
 
-       post {
+    // SECCIÓN DE NOTIFICACIONES (Se ejecuta al final de todo)
+    post {
         success {
             echo '✅ NOTIFICACIÓN: El Pipeline finalizó con ÉXITO.'
             echo 'El proyecto se compiló, testeó y desplegó correctamente.'
-            // Aquí podrías agregar plugins de Slack o Email si los tuvieras configurados
+            echo 'Listo para ser revisado.'
         }
         failure {
             echo '❌ NOTIFICACIÓN: El Pipeline FALLÓ.'
             echo 'Revisar los logs para ver qué etapa se rompió.'
         }
+        always {
+            echo '🏁 Fin de la ejecución del Pipeline.'
+        }
     }
-// Cierre del pipeline
 }
-
