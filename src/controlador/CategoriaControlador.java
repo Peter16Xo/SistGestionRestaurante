@@ -41,7 +41,7 @@ public class CategoriaControlador {
     private void registrarCategoria() {
         String nombre = vista.txtNombre.getText().trim();
         if (nombre.isEmpty()) {
-            mostrarMensaje("ERROR: EL NOMBRE DE LA CATEGORÍA ES OBLIGATORIO.");
+            mostrarMensaje("ERROR: EL NOMBRE DE LA CATEGORÍA ES OBLIGATORIOO.");
             return;
         }
 
